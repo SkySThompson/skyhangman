@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Bubblegum+Sans&display=swap');
+
+body {
+    background: linear-gradient(135deg, #f5e6ea 0%, #ffd1dc 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Quicksand', sans-serif;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 40px;
+    box-shadow: 0 15px 35px rgba(222, 176, 187, 0.3);
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #85b79d;
+    font-size: 3rem;
+    margin: 0 0 20px 0;
+    font-family: 'Bubblegum Sans', cursive;
+    text-shadow: 2px 2px 0px rgba(222, 176, 187, 0.5);
+    letter-spacing: 2px;
+}
+
+#gallows {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(133, 183, 157, 0.05);
+    padding: 20px;
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
+#word {
+    letter-spacing: 12px;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #85b79d;
+    font-weight: bold;
+    font-family: 'Quicksand', sans-serif;
+    padding: 30px;
+    background: rgba(133, 183, 157, 0.1);
+    border-radius: 25px;
+    width: 80%;
+    min-height: 50px;
+}
+
+#controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    padding: 25px;
+    background: rgba(222, 176, 187, 0.1);
+    border-radius: 25px;
+    box-sizing: border-box;
+}
+
+#guessBox {
+    height: 60px;
+    border-radius: 20px;
+    font-size: 1.2rem;
+    width: 80%;
+    max-width: 300px;
+    padding: 0 20px;
+    border: 3px solid rgba(222, 176, 187, 0.5);
+    outline: none;
+    transition: all 0.3s ease;
+    font-family: 'Quicksand', sans-serif;
+    margin-bottom: 10px;
+}
+
+#guessBox:focus {
+    border-color: #85b79d;
+    box-shadow: 0 0 20px rgba(133, 183, 157, 0.2);
+}
+
+.button {
+    padding: 18px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    text-align: center;
+    color: white;
+    background-color: #85b79d;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0 5px 15px rgba(133, 183, 157, 0.3);
+    transition: all 0.3s ease;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    min-width: 200px;
+    margin: 5px 0;
+}
+
+.button:hover {
+    background-color: #98c7b0;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(133, 183, 157, 0.4);
+}
+
+.button:active {
+    transform: translateY(1px);
+    box-shadow: 0 2px 10px rgba(133, 183, 157, 0.2);
+}
+
+form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+form .button {
+    background-color: #deb0bb;
+    box-shadow: 0 5px 15px rgba(222, 176, 187, 0.3);
+}
+
+form .button:hover {
+    background-color: #e5c1ca;
+}
+
+#guesses {
+    padding: 25px;
+    background: rgba(133, 183, 157, 0.1);
+    border-radius: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.guess {
+    padding: 15px;
+    border: 2px solid #deb0bb;
+    border-radius: 15px;
+    background-color: white;
+    transition: all 0.3s ease;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: #85b79d;
+    min-width: 20px;
+}
+
+.guess:hover {
+    background-color: #f8e1e5;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(222, 176, 187, 0.2);
+}
+
+.win {
+    color: white;
+    background-color: #a8e6cf;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+.loss {
+    color: white;
+    background-color: #ffb7b2;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) {
+    main {
+        padding: 25px;
+        width: 95%;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    #word {
+        font-size: 2rem;
+        letter-spacing: 8px;
+        padding: 20px;
+        width: 90%;
+    }
+
+    #controls {
+        padding: 20px;
+    }
+
+    #guessBox {
+        width: 90%;
+    }
+
+    .button {
+        width: 90%;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    #guesses {
+        padding: 15px;
+        gap: 10px;
+    }
+
+    .guess {
+        padding: 12px;
+        font-size: 1rem;
+    }
+}
